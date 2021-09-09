@@ -34,7 +34,7 @@
 
 -(NSArray*) imageNames{
     if(!_developerimageNames)
-        _developerimageNames = @[@"Bill",@"Eric",@"Jeff",@"Mouse",@"Dog",@"Cat"];
+        _developerimageNames = @[@"YiwenXu",@"ShuangLiang",@"YinzeCui",@"YuanchunZhao",@"Teamwork1",@"Teamwork2",@"Teamwork3"];
     NSLog(@"imageNames");
     
     return _developerimageNames;
@@ -42,7 +42,7 @@
 
 -(NSDictionary*) imageDictionary{
     if(!_developerImageDictionary)
-        _developerImageDictionary = @{@"Bill":[UIImage imageNamed:@"Bill"],@"Eric":[UIImage imageNamed:@"Eric"],@"Jeff":[UIImage imageNamed:@"Jeff"],@"Mouse":[UIImage imageNamed:@"Mouse"],@"Dog":[UIImage imageNamed:@"Dog"],@"Cat":[UIImage imageNamed:@"Cat"]};
+        _developerImageDictionary = @{@"YiwenXu":[UIImage imageNamed:@"YiwenXu"],@"ShuangLiang":[UIImage imageNamed:@"ShuangLiang"],@"YinzeCui":[UIImage imageNamed:@"YinzeCui"],@"YuanchunZhao":[UIImage imageNamed:@"YuanchunZhao"],@"Teamwork1":[UIImage imageNamed:@"Teamwork1"],@"Teamwork2":[UIImage imageNamed:@"Teamwork2"],@"Teamwork3":[UIImage imageNamed:@"Teamwork3"]};
     
 //    [_imageDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 //

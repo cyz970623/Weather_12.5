@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CD95C5C626E95CCE00CF6766 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95C5C526E95CCE00CF6766 /* ImageModel.m */; };
+		CD95C5C826E96BD600CF6766 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95C5C726E96BD600CF6766 /* CollectionViewCell.swift */; };
+		CD95C5CA26E9D46A00CF6766 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95C5C926E9D46A00CF6766 /* CollectionViewLayout.swift */; };
 		CDF7A29E26E8B16200581599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF7A29D26E8B16200581599 /* AppDelegate.swift */; };
 		CDF7A2A026E8B16200581599 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF7A29F26E8B16200581599 /* SceneDelegate.swift */; };
 		CDF7A2A526E8B16200581599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF7A2A326E8B16200581599 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		CD95C5C326E95CCE00CF6766 /* Weather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weather-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD95C5C426E95CCE00CF6766 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		CD95C5C526E95CCE00CF6766 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		CD95C5C726E96BD600CF6766 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CD95C5C926E9D46A00CF6766 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		CDF7A29A26E8B16200581599 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF7A29D26E8B16200581599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF7A29F26E8B16200581599 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD95C5CB26EA942300CF6766 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CD95C5C926E9D46A00CF6766 /* CollectionViewLayout.swift */,
+				CDF7A2BA26E94ACC00581599 /* CollectionViewController.swift */,
+				CD95C5C726E96BD600CF6766 /* CollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CD95C5CC26EA973300CF6766 /* ImageModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD95C5C426E95CCE00CF6766 /* ImageModel.h */,
+				CD95C5C526E95CCE00CF6766 /* ImageModel.m */,
+			);
+			path = ImageModel;
+			sourceTree = "<group>";
+		};
 		CDF7A29126E8B16200581599 = {
 			isa = PBXGroup;
 			children = (
@@ -66,16 +89,15 @@
 		CDF7A29C26E8B16200581599 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				CD95C5CC26EA973300CF6766 /* ImageModel */,
+				CD95C5CB26EA942300CF6766 /* CollectionView */,
 				CDF7A2B926E94A4300581599 /* TableViewController */,
 				CDF7A29D26E8B16200581599 /* AppDelegate.swift */,
 				CDF7A29F26E8B16200581599 /* SceneDelegate.swift */,
 				CDF7A2A326E8B16200581599 /* Main.storyboard */,
-				CDF7A2BA26E94ACC00581599 /* CollectionViewController.swift */,
 				CDF7A2A626E8B16400581599 /* Assets.xcassets */,
 				CDF7A2A826E8B16400581599 /* LaunchScreen.storyboard */,
 				CDF7A2AB26E8B16400581599 /* Info.plist */,
-				CD95C5C426E95CCE00CF6766 /* ImageModel.h */,
-				CD95C5C526E95CCE00CF6766 /* ImageModel.m */,
 				CD95C5C326E95CCE00CF6766 /* Weather-Bridging-Header.h */,
 			);
 			path = Weather;
@@ -164,9 +186,11 @@
 			files = (
 				CDF7A2BB26E94ACC00581599 /* CollectionViewController.swift in Sources */,
 				CDF7A29E26E8B16200581599 /* AppDelegate.swift in Sources */,
+				CD95C5C826E96BD600CF6766 /* CollectionViewCell.swift in Sources */,
 				CD95C5C626E95CCE00CF6766 /* ImageModel.m in Sources */,
 				CDF7A2B426E8B3EA00581599 /* TableViewController.swift in Sources */,
 				CDF7A2B626E9496400581599 /* BGTableViewController.swift in Sources */,
+				CD95C5CA26E9D46A00CF6766 /* CollectionViewLayout.swift in Sources */,
 				CDF7A2A026E8B16200581599 /* SceneDelegate.swift in Sources */,
 				CDF7A2B826E9498600581599 /* SettingTableViewController.swift in Sources */,
 			);
