@@ -220,17 +220,26 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="30" maxValue="120" continuous="NO" minimumValueImage="clock" catalog="system" maximumValueImage="clock.fill" translatesAutoresizingMaskIntoConstraints="NO" id="w0U-Yr-wY3">
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="30" minimumValueImage="clock" catalog="system" maximumValueImage="clock.fill" translatesAutoresizingMaskIntoConstraints="NO" id="w0U-Yr-wY3">
                                             <rect key="frame" x="222" y="7" width="164" height="31.5"/>
                                             <connections>
+                                                <action selector="timeSliderTouchUpInside:" destination="RgM-us-tuv" eventType="touchUpInside" id="zWJ-B0-tyG"/>
                                                 <action selector="timeSliderValueChange:" destination="RgM-us-tuv" eventType="valueChanged" id="Rw1-bt-pdA"/>
                                             </connections>
                                         </slider>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcp-aI-AeC">
+                                            <rect key="frame" x="197" y="12" width="19" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemBlueColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="w0U-Yr-wY3" firstAttribute="leading" secondItem="Tcp-aI-AeC" secondAttribute="trailing" constant="8" symbolic="YES" id="0f5-P2-kFm"/>
                                         <constraint firstAttribute="trailing" secondItem="w0U-Yr-wY3" secondAttribute="trailing" constant="30" id="2TO-qK-gE2"/>
                                         <constraint firstItem="w0U-Yr-wY3" firstAttribute="leading" secondItem="xiS-IF-cNv" secondAttribute="trailing" constant="78" id="IRO-Kx-m0d"/>
                                         <constraint firstItem="xiS-IF-cNv" firstAttribute="leading" secondItem="S4r-b6-jsd" secondAttribute="leadingMargin" id="Ksg-qh-hH1"/>
+                                        <constraint firstItem="Tcp-aI-AeC" firstAttribute="centerY" secondItem="S4r-b6-jsd" secondAttribute="centerY" id="Uiz-QF-QQC"/>
                                         <constraint firstItem="xiS-IF-cNv" firstAttribute="centerY" secondItem="w0U-Yr-wY3" secondAttribute="centerY" id="gAq-hO-BoE"/>
                                         <constraint firstItem="w0U-Yr-wY3" firstAttribute="top" secondItem="S4r-b6-jsd" secondAttribute="topMargin" constant="-4" id="i0c-Af-r3T"/>
                                         <constraint firstItem="xiS-IF-cNv" firstAttribute="centerY" secondItem="S4r-b6-jsd" secondAttribute="centerY" id="olX-7g-YmZ"/>
@@ -241,6 +250,7 @@
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                                 <connections>
+                                    <outlet property="timeLable" destination="Tcp-aI-AeC" id="ahA-5a-CZC"/>
                                     <outlet property="timeSlider" destination="w0U-Yr-wY3" id="ERA-d3-Gq4"/>
                                 </connections>
                             </tableViewCell>
@@ -331,6 +341,9 @@
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

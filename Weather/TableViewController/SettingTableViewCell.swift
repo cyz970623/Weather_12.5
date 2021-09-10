@@ -9,10 +9,12 @@ import UIKit
 
 class SettingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timeLable: UILabel!
     @IBOutlet weak var autoSwitch: UISwitch!
     @IBOutlet weak var timeSlider: UISlider!
     
-    private var time = 30
+    private var time:Float = 5
+    var navigationViewController:NavigationViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,17 +33,22 @@ class SettingTableViewCell: UITableViewCell {
         }else{
             print("Off")
         }
+        navigationViewController?.timerStart(timerInterval: Double(time), status: autoSwitch.isOn)
+        
     }
     
 
-    @IBAction func timeSliderValueChange(_ sender: Any) {
-        time = Int(timeSlider.value)
+    @IBAction func timeSliderTouchUpInside(_ sender: Any) {
+        time = timeSlider.value
+        navigationViewController?.timerStart(timerInterval: Double(time), status: autoSwitch.isOn)
+        print(time)
     }
     
-    //public function
-    func getTime() -> Int{
-        return time;
+    @IBAction func timeSliderValueChange(_ sender: Any) {
+        timeLable.text = "\(Int(timeSlider.value))"+"s"
+
     }
+    
     
 
 }

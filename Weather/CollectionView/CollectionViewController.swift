@@ -29,6 +29,8 @@ class CollectionViewController: UICollectionViewController {
     lazy var imageModel = {
        return ImageModel.sharedInstance()
     }()
+    
+
 
 
 //     MARK: UICollectionViewDataSource
