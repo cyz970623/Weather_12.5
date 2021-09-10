@@ -171,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="autoChangeCell" id="AZ7-ER-87z">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="autoChangeCell" id="AZ7-ER-87z" customClass="SettingTableViewCell" customModule="Weather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="44.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AZ7-ER-87z" id="PWE-S1-BR3">
@@ -186,6 +186,9 @@
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6x-Eh-LRi">
                                             <rect key="frame" x="335" y="6.5" width="51" height="31.5"/>
+                                            <connections>
+                                                <action selector="autoChangeTriggered:" destination="AZ7-ER-87z" eventType="primaryActionTriggered" id="g02-vo-Ac3"/>
+                                            </connections>
                                         </switch>
                                     </subviews>
                                     <constraints>
@@ -200,8 +203,11 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
+                                <connections>
+                                    <outlet property="autoSwitch" destination="E6x-Eh-LRi" id="sLS-a3-cp5"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="changePicsCell" id="RgM-us-tuv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="changePicsCell" id="RgM-us-tuv" customClass="SettingTableViewCell" customModule="Weather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="69" width="414" height="44.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RgM-us-tuv" id="S4r-b6-jsd">
@@ -214,8 +220,11 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="w0U-Yr-wY3">
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="30" maxValue="120" continuous="NO" minimumValueImage="clock" catalog="system" maximumValueImage="clock.fill" translatesAutoresizingMaskIntoConstraints="NO" id="w0U-Yr-wY3">
                                             <rect key="frame" x="222" y="7" width="164" height="31.5"/>
+                                            <connections>
+                                                <action selector="timeSliderValueChange:" destination="RgM-us-tuv" eventType="valueChanged" id="Rw1-bt-pdA"/>
+                                            </connections>
                                         </slider>
                                     </subviews>
                                     <constraints>
@@ -231,6 +240,9 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
+                                <connections>
+                                    <outlet property="timeSlider" destination="w0U-Yr-wY3" id="ERA-d3-Gq4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -292,7 +304,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWZ-Oa-ja9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185.50724637681162" y="793.52678571428567"/>
+            <point key="canvasLocation" x="186" y="798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BXe-3E-wzY">
@@ -312,6 +324,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
